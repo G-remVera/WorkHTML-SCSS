@@ -2,9 +2,11 @@
 $colorGlobal : white;
 $colorFont: black;
 
-html{
+html,body{
     max-height: 100%;
     width: 100%;
+    margin: 0%;
+    padding: 0%;
 }
 
 // HEADER NAV SANS BOOTSTRAP //
@@ -12,7 +14,7 @@ html{
 background-color: $colorGlobal;
 padding: 0;
 text-align: center;
-padding: 50px;
+padding: 25px;
     .logo{
         background-size: cover;
         width: 200px;
@@ -28,6 +30,14 @@ padding: 50px;
         display:inline-block;
         margin: 0 30px;
     }
+    #menu{
+        padding: 0%;
+        margin:0;
+    }
+}
+
+#checkBoxMenu{
+    display: none;
 }
 
 .container-fluid{
@@ -38,7 +48,7 @@ padding: 50px;
 // IMAGE FULL WIDTH//
 .imgFullWidth {
     position: relative;
-    .textBox {
+    #textBox {
         position: absolute;
         top: 5%;
         right: 5%;
@@ -60,7 +70,8 @@ padding: 50px;
         }
     }
 }
- // BONUS:ANIMATION "FLOU" SUR IMG FULL WIDTH //@at-root
+
+ // BONUS:ANIMATION "FLOU" SUR IMG FULL WIDTH //
 .snowboard {
     background: no-repeat center center;
     background-size: cover;
@@ -92,6 +103,7 @@ padding: 50px;
             margin: 0px;
         }
     }
+
     #snow {
         transition: transform 0.7s linear;
         &:hover {
@@ -122,11 +134,22 @@ padding: 50px;
         font-family: Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;
     }
 }
+
+
+// KEYFRAME ANIMATION CITATION //
+@keyframes pulse {
+    0% {transform: scale(1);}
+    25% {transform: scale(1.2);}
+    50% {transform: scale(1);}
+    75% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+
 //FOOTER//
 .footer{
     height: 50px;
         .navFooter{
-            padding: 0;
             padding: 50px;  
         }
 
@@ -151,24 +174,140 @@ padding: 50px;
 }
 
 
-@keyframes pulse {
-    0% {transform: scale(1);}
-    25% {transform: scale(1.2);}
-    50% {transform: scale(1);}
-    75% {transform: scale(1.2);}
-    100% {transform: scale(1);}
-}
-
-
-.mobile{
+.logoMobile {
     display: none;
 }
 
-#navigation{
-    display: none;
+// MEDIA QUERIES VERSION MOBILE //
+
+@media screen and (max-width:900px){
+
+    // CITATION CACHEE //
+    #citation{display: none;}
+    #textBox{
+        position: -ms-page static;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // ANULATION ANIMATION IMAGE //
+    #snow{
+        transform: none !important;
+    }
+
+    // LOGO CENTRE //
+    .logoMobile {
+        display: block;
+        position: relative;
+        max-width: 200px;
+        max-height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // HUMBURGER MENU, CODE PEN: https://codepen.io/anon/pen/Waxwzv //
+    .navHeader {
+        .logo {
+            display: none
+        }
+
+        a {
+            text-decoration: none;
+            color: $colorFont;
+            transition: color 0.3s ease;
+        }
+
+        a :hover {
+            color: #47acff;
+        }
+
+        #menuToggle {
+            display: block;
+            position: relative;
+            top: 5%;
+            left: auto;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+        }
+
+        #menuToggle span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: $colorFont;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease;
+        }
+
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+        #menuToggle input:checked~span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: $colorFont;
+        }
+
+        #menuToggle input:checked~span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menuToggle input:checked~span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menu {
+            position: absolute;
+            width: 300px;
+            margin: -200px 0 0 -50px;
+            padding: 50px;
+            padding-top: 200px;
+            background: lightgray;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        }
+
+        #menu li {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        #menuToggle input:checked~ul {
+            transform: none;
+        }
+    }
 }
 
-@media all and (max-width:520px){
-    .navHeader{display: none;}
-    .mobile {display: block;}
-}

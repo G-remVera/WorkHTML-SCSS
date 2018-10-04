@@ -1,3 +1,7 @@
+<!-- Devoir HTML/SCSS  
+     A rendre pour le 05/09/18 a P.Denis
+     Jérémy VERA - L3CDI StCharles 2018-2019 -->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,32 +11,44 @@
     <title>Devoir HTML Jérémy VERA</title>
 </head>
     <body>
+
+        <!-- Nav menu avec Humburger pour vers Mobile -->
         <header>
             <nav class="navHeader">
-                <a href="#"><img class="logo" src="img/mountain-svg-5.png" alt="Responsive image"></a>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <div id="menuToggle">
+                    <input id="checkBoxMenu" type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <a href="#"><img class="logo" src="img/mountain-svg-5.png" alt="Responsive image"></a>
+                            <a href="#"><li>Accueil</li></a>
+                            <a href="#"><li>Articles</li></a>
+                            <a href="#"><li>À propos</li></a>
+                            <a href="#"><li>Contact</li></a>
+                        </ul>
+                </div>
             </nav>
-            <div class="mobile">
-                <a href="#"><img class="logoMobile card-img" src="img/mountain-svg-5.png" alt="Responsive image"></a>
-            </div>
+            <a href="#"><img class="logoMobile" src="img/mountain-svg-5.png" alt="Responsive image"></a>
         </header>
+
+        <!-- image full width avec text -->
         <main>
             <div class="container-fluid">
                 <div class="imgFullWidth">
-                <img class="snowboard col-sm-12 col-lg-12 img-responsive" src="img/snowboarding.jpg" alt="Responsive image">
-                <div class="textBox col-sm-12 col-lg-12">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, adipisci, eligendi dolore hic similique aperiam
-                        veritatis cupiditate consequatur quo illo, libero provident qui quos recusandae quidem perspiciatis esse temporibus
-                        nemo!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reprehenderit alias ratione cumque libero, temporibus
-                        perspiciatis itaque mollitia aliquam soluta veniam consectetur quibusdam, molestiae vero deleniti architecto cum
-                        aspernatur eveniet!
-                    </p>
+                    <img class="snowboard col-sm-12 col-lg-12 img-responsive" src="img/snowboarding.jpg" alt="Responsive image">
+                        <div id="textBox" class="col-sm-6 col-lg-12">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, adipisci, eligendi dolore hic similique aperiam
+                                veritatis cupiditate consequatur quo illo, libero provident qui quos recusandae quidem perspiciatis esse temporibus
+                                nemo!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reprehenderit alias ratione cumque libero, temporibus
+                                perspiciatis itaque mollitia aliquam soluta veniam consectetur quibusdam, molestiae vero deleniti architecto cum
+                                aspernatur eveniet!
+                            </p>
+                        </div>
                 </div>
-                </div>
+
+                <!-- text à gauche avec image droite avec animation translate -->
                 <div class="textImg container-fluid">
                     <div class="row">
                             <div id="textLeft" class="col-sm-12 col-lg-6">
@@ -49,9 +65,11 @@
                     </div>
                 </div>
             </div>
-                <div class="container">
-                    <blockquote id="citation" class=" blockquote text-center col-sm-12 col-lg-12">
-                            <p class="textCitation mb-0">
+
+                <!-- citation centré avec animation "Pulse" -->
+                <div id="citation"class="container">
+                    <blockquote  class=" blockquote text-center col-sm-12 col-lg-12">
+                            <p class="textCitation">
                                 << Les montagnes ne vivent que de l'amour des hommes. Là où les habitations, puis les arbres, puis l'herbe s'épuisent,
                                 naît le royaume stérile, sauvage, minéral ; cependant, dans sa pauvreté extrême, dans sa nudité totale, il dispense une
                                 richesse qui n'a pas de prix : le bonheur que l'on découvre dans les yeux de ceux qui le fréquentent >>
@@ -61,34 +79,14 @@
                 </div>
             </div>
         </main>
+
+        <!-- Footer classique -->
         <footer class="navFooter container-fluid card-footer col-sm-12 col-lg-12">
             <nav>
                 <li><a href="#">À propos</a></li>
-                <li><a href="#">sociaux</a></li>
+                <li><a href="#">Réseaux Sociaux</a></li>
                 <li><a href="#">Contact</a></li>
             </nav>
         </footer>
-        <nav id="navigation">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu">
-                    <a href="#">
-                        <li>Home</li>
-                    </a>
-                    <a href="#">
-                        <li>About</li>
-                    </a>
-                    <a href="#">
-                        <li>Info</li>
-                    </a>
-                    <a href="#">
-                        <li>Contact</li>
-                    </a>
-                </ul>
-            </div>
-        </nav>
     </body>
 </html>

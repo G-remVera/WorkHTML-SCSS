@@ -1,0 +1,132 @@
+html {
+  max-height: 100%;
+  width: 100%; }
+
+.navHeader {
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  padding: 50px; }
+  .navHeader .logo {
+    background-size: cover;
+    width: 200px;
+    height: 200px; }
+  .navHeader li {
+    display: inline;
+    list-style: none; }
+  .navHeader a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    display: inline-block;
+    margin: 0 30px; }
+
+.container-fluid {
+  padding: 0%; }
+
+.imgFullWidth {
+  position: relative; }
+  .imgFullWidth .textBox {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 2%;
+    max-width: 700px;
+    max-height: 100%;
+    background-color: white;
+    color: black;
+    opacity: 0.7; }
+    .imgFullWidth .textBox p {
+      font-family: Apple Chancery, cursive;
+      text-align: justify;
+      margin: 0px; }
+    .imgFullWidth .textBox h2 {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+
+.snowboard {
+  background: no-repeat center center;
+  background-size: cover;
+  max-width: 100%;
+  max-height: 80%;
+  padding: 0%;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+  .snowboard:hover {
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+
+.textImg #textLeft {
+  padding: 5%; }
+  .textImg #textLeft h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+  .textImg #textLeft p {
+    font-family: Apple Chancery, cursive;
+    text-align: justify;
+    margin: 0px; }
+.textImg #snow {
+  transition: transform 0.7s linear; }
+  .textImg #snow:hover {
+    transform: translateX(-10px); }
+
+#citation {
+  padding: 5%;
+  background-color: white;
+  color: black; }
+  #citation .textCitation {
+    padding: 5%;
+    font-family: Apple Chancery, cursive;
+    text-align: justify;
+    transition: transform .2s;
+    margin: 0px;
+    font-size: 1.2em; }
+    #citation .textCitation:hover {
+      animation: pulse 4s linear alternate infinite; }
+  #citation cite {
+    font-family: Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif; }
+
+.footer {
+  height: 50px; }
+  .footer .navFooter {
+    padding: 0;
+    padding: 50px; }
+
+.navFooter {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  padding: 5%; }
+  .navFooter li {
+    display: inline;
+    list-style: none; }
+  .navFooter a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    display: inline-block;
+    margin: 0 30px; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  25% {
+    transform: scale(1.2); }
+  50% {
+    transform: scale(1); }
+  75% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
+.mobile {
+  display: none; }
+
+#navigation {
+  display: none; }
+
+@media all and (max-width: 520px) {
+  .navHeader {
+    display: none; }
+
+  .mobile {
+    display: block; } }
+
+/*# sourceMappingURL=style.css.map */
